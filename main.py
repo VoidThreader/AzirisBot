@@ -95,7 +95,7 @@ async def rngNum(interaction: discord.Interaction, mode: app_commands.Choice[str
 		respond = rand.randint(1, 20)
 	
 	await interaction.response.send_message(respond)
-	print(f"SSecret number to guess just for you: {randGenNum}\n-smc")
+	print(f"Secret number to guess just for you: {randGenNum}\n-smc")
 
 @client.tree.command(
 					name="numguess",

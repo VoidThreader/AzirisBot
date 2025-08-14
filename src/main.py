@@ -51,12 +51,37 @@ intents.presences = True
 client = Client(command_prefix=PREFIX, intents=intents)
 
 @client.tree.command(
+					name="help",
+					description="Lists all available commands.",
+					guild=GUILD_ID
+					)
+async def helpCmd(interaction: discord.Interaction):
+	embed = discord.Embed(
+						title="AzirisBot Commands",
+						description="List of all commands found in AzirisBot",
+						color=0x4AA8FF,
+						)
+	embed.add_field(name="/shadowmilk", value="Sends an image of shadow milk cookie.", inline=True)
+	embed.add_field(name="/backflip", value="Mystic flour cookie performs backflips.", inline=True)
+	embed.add_field(name="/rng", value="Rolls a d20. To start a number guessing game, use 'begin' to start or 'end' to stop.", inline=False)
+	embed.add_field(name="/numguess", value="Guess a number from /rng, must be an active game to work.", inline=False)
+	await interaction.response.send_message(embed=embed)
+
+@client.tree.command(
 					name="shadowmilk", 
 					description="Sends an image of shadow milk cookie.",
 					guild=GUILD_ID
 					)
 async def shadowMilkImage(interaction: discord.Interaction):
 	await interaction.response.send_message(file=discord.File('assets/shadow_milk_plush.png'))
+
+@client.tree.command(
+					name="backflip", 
+					description="Mystic flour cookie performs backflips.",
+					guild=GUILD_ID
+					)
+async def shadowMilkImage(interaction: discord.Interaction):
+	await interaction.response.send_message(file=discord.File('assets/mfc_backflip.gif'))
 
 @client.tree.command(
 					name="rng",
@@ -67,8 +92,7 @@ async def shadowMilkImage(interaction: discord.Interaction):
 @app_commands.choices(mode=[
         app_commands.Choice(name='roll 20', value='0'),
 		app_commands.Choice(name='begin', value='1'),
-        app_commands.Choice(name='end', value='2'),
-    ])
+        app_commands.Choice(name='end', value='2')])
 async def rngNum(interaction: discord.Interaction, mode: app_commands.Choice[str]):
 	
 	global rngMode, randGenNum
@@ -83,6 +107,7 @@ async def rngNum(interaction: discord.Interaction, mode: app_commands.Choice[str
 		rngMode = True
 		
 		respond = "I rolled a die! Guess which number I got from 1 to 20!"
+		print(f"Secret number to guess just for you: {randGenNum} -smc")
 	elif mode.value == '2':
 		if not rngMode:
 			await interaction.response.send_message("There's no game in progress, silly.")
@@ -95,7 +120,6 @@ async def rngNum(interaction: discord.Interaction, mode: app_commands.Choice[str
 		respond = rand.randint(1, 20)
 	
 	await interaction.response.send_message(respond)
-	print(f"Secret number to guess just for you: {randGenNum}\n-smc")
 
 @client.tree.command(
 					name="numguess",

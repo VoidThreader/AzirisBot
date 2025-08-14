@@ -27,10 +27,10 @@ class Client(commands.Bot):
 		except Exception as error:
 			print(f"Error syncing commands: {error}")
 
-	async def on_member_join(self, member):
-		if not member.bot:
-			print(f'{member} server.')
-			await member.send(f"Welcome to botEnv {member.mention}! Ready for some giggles?")
+#	async def on_member_join(self, member):
+#		if not member.bot:
+#			print(f'{member} server.')
+#			await member.send(f"Welcome to Operation:Aziris {member.mention}! Ready for some giggles?") #I'll work on this at a later time
 
 	async def on_message(self, message):
 		print(f"Message auth {message.author}: {message.content}")

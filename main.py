@@ -44,7 +44,6 @@ class Client(commands.Bot):
 		if 'taking too long' in message.content.lower():
 			await message.channel.send(file=discord.File('assets/your_taking_too_long.png'))
 
-
 		if 'slashkig' in message.content.lower() or 'penguin' in message.content.lower():
 			await message.channel.send("Slashkig is a penguin!", file=discord.File('assets/shadow_milk_sing.png'))
 

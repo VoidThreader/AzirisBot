@@ -7,7 +7,7 @@ module.exports = {
 	
 	async execute(interaction) {
 		const helpMessage = new EmbedBuilder()
-			.setTitle('Help command')
+			.setTitle('AzirisBot Commands')
 			.setAuthor({ name: 'Bot Help', iconURL: interaction.client.user.displayAvatarURL() })
 			.setColor(0x4AA8FF)
 			.setDescription(`List of commands:\n

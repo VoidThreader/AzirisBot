@@ -1,2 +1,4 @@
-*.log
-*.env
+node_modules
+config.json
+eslint.config.js
+.env

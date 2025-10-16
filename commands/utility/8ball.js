@@ -23,6 +23,6 @@ module.exports = {
 
         const question = interaction.options.getString('question');
         const randomResponse = responses[Math.floor(Math.random() * responses.length)];
-        await interaction.reply(`**Q:** ${question}\n**A:** ${randomResponse}`);
+        await interaction.reply(`**Q:**  ${question}\n**A:**  ${randomResponse}`);
     },
 };

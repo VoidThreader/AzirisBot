@@ -10,7 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^14.22.1",
-    "fs": "^0.0.1-security"
+    "fs": "^0.0.1-security",
+    "yarn": "^1.22.22"
   },
   "devDependencies": {
     "@eslint/js": "^9.34.0",

@@ -13,8 +13,10 @@ module.exports = {
 			.setDescription(`List of commands:\n
 				• **/help**: Provides information about the bot's commands.
 				• **/flip**: Mystic flour cookie performs mystic flips.
+				• **/aurafarm**: Silent Salt aurafarming.
 				• **/rng**: Number guessing game, rolls a d20 on default. To quit, type "quit" in chat.
 				• **/roll**: Rolls a d20 on default. Change it with the lowest and highest options.
+				• **/8-ball**: Answers a question.
 				• **/shadowmilk**: Sends an image of shadow milk cookie.
 			`)
 

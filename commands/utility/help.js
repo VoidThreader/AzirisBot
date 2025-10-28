@@ -12,6 +12,7 @@ module.exports = {
 			.setColor(0x4AA8FF)
 			.setDescription(`List of commands:\n
 				• **/help**: Provides information about the bot's commands.
+				• **/ping**: Checks the bot's latency.
 				• **/flip**: Mystic flour cookie performs mystic flips.
 				• **/aurafarm**: Silent Salt aurafarming.
 				• **/rng**: Number guessing game, rolls a d20 on default. To quit, type "quit" in chat.

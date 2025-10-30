@@ -6,6 +6,6 @@ module.exports = {
         .setDescription('Checks the bot\'s latency.'),
     
     async execute(interaction) {
-        await interaction.reply(`Ping: ${(Date.now() - interaction.createdTimestamp) * -1}ms.`);
+        await interaction.reply(`Ping: ${Math.abs((Date.now() - interaction.createdTimestamp))}ms.`);
     },
 };

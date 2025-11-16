@@ -3,8 +3,8 @@ const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('help')
-		.setDescription(`Provides information about the bot's commands.`),
-	
+		.setDescription('Provides information about the bot\'s commands.'),
+
 	async execute(interaction) {
 		const helpMessage = new EmbedBuilder()
 			.setTitle('AzirisBot Commands')
@@ -19,7 +19,7 @@ module.exports = {
 				• **/roll**: Rolls a d20 on default. Change it with given options.
 				• **/8-ball**: Answers a question.
 				• **/shadowmilk**: Sends an image of shadow milk cookie.
-			`)
+			`);
 
 		await interaction.reply({ embeds: [helpMessage] });
 	},

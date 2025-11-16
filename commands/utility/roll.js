@@ -29,7 +29,7 @@ module.exports = {
 		),
 
 	async execute(interaction) {
-		
+
 		let sumRoll = 0;
 		let finalRoll = 1;
 
@@ -44,16 +44,16 @@ module.exports = {
 
 		const rolls = Math.min(Math.max(interaction.options.getInteger('rolls') ?? 1, 1), 100);
 		for (let i = 0; i < rolls; i++) {
-			const generatedNum = Math.floor(Math.random() * (range.highest - range.lowest + 1)) + range.lowest;
+			const generatedNum = getRandInt(range.lowest, range.highest);
 			sumRoll += generatedNum;
 		}
 
 		const modifier = interaction.options.getInteger('modifier') ?? 0;
-		
+
 		if ((sumRoll + modifier) > 1) {
 			finalRoll = sumRoll + modifier;
 		}
-		
+
 		await interaction.reply(`${finalRoll}`);
 	},
 };

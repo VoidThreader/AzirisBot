@@ -39,7 +39,7 @@ module.exports = {
 			[range.lowest, range.highest] = [range.highest, range.lowest];
 		}
 
-		const generatedNum = Math.floor(Math.random() * (range.highest - range.lowest + 1)) + range.lowest;
+		const generatedNum = getRandInt(range.lowest, range.highest);
 		await interaction.reply(`"I rolled a die! Guess which number I got from ${range.lowest} to ${range.highest}!"`);
 
 		const collector = interaction.channel.createMessageCollector({

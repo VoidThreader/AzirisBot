@@ -6,7 +6,7 @@ module.exports = {
 		.setName('shadowmilk')
 		.setDescription('Sends an image of shadow milk cookie.'),
 	async execute(interaction) {
-		files = [
+		const files = [
 			'./assets/shadow_milk_plush.png',
 			'./assets/shadow_milk_sing.png',
 			'./assets/shadow_milk_laugh.png',

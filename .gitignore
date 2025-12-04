@@ -2,3 +2,4 @@ node_modules
 config.json
 eslint.config.js
 .env
+.hidden*

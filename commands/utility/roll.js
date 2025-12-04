@@ -1,4 +1,5 @@
 const { SlashCommandBuilder } = require('discord.js');
+const { getRandInt } = require('../../utils/rand.js');
 
 // Fuck my life
 module.exports = {

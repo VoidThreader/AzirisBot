@@ -1,4 +1,5 @@
 const { SlashCommandBuilder } = require('discord.js');
+const { getRandInt } = require('../../utils/rand.js');
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -22,7 +23,7 @@ module.exports = {
 		];
 
 		const question = interaction.options.getString('question');
-		const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+		const randomResponse = responses[getRandInt(0, responses.length - 1)];
 		await interaction.reply(`**Q:**  ${question}\n**A:**  ${randomResponse}`);
 	},
 };

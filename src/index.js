@@ -79,6 +79,12 @@ client.on(Events.MessageCreate, async message => {
 			files: ['./assets/shadow_milk_sing.png'],
 		});
 	}
+	
+	if (message.content.toLowerCase().includes('*sips*')) {
+		await message.channel.send({
+			files: ['./assets/esc_sip.png'],
+		});
+	}
 
 });
 

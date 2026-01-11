@@ -1,6 +1,7 @@
 const { Client, Collection, Events, GatewayIntentBits, MessageFlags } = require('discord.js');
 const fs = require('node:fs');
 const path = require('node:path');
+const { getRandInt } = require('../utils/rand.js');
 
 const { token } = require('../config.json');
 
@@ -84,6 +85,19 @@ client.on(Events.MessageCreate, async message => {
 		await message.channel.send({
 			files: ['./assets/esc_sip.png'],
 		});
+	}
+
+	if (message.content.toLowerCase() == 'fountgpt is this true?') {
+		const responses = [
+			'Correct!',
+			'It is decidedly so.',
+			'Probably.',
+			'No doubt about it.',
+			'No.',
+		];
+
+		const randomResponse = responses[getRandInt(0, responses.length - 1)];
+		await message.channel.send(`${randomResponse}`);
 	}
 
 });

@@ -77,7 +77,7 @@ client.on(Events.MessageCreate, async message => {
 	if (message.content.toLowerCase().includes('slashkig') || message.content.toLowerCase().includes('penguin')) {
 		await message.channel.send({
 			content: 'Slashkig is a Penguin!',
-			files: ['./assets/shadow_milk_sing.png'],
+			files: ['./assets/smc_sing.png'],
 		});
 	}
 	
@@ -89,15 +89,21 @@ client.on(Events.MessageCreate, async message => {
 
 	if (message.content.toLowerCase() == 'fountgpt is this true?') {
 		const responses = [
-			'Correct!',
-			'It is decidedly so.',
-			'Probably.',
-			'No doubt about it.',
-			'No.',
+			{ type: 'text', content: 'Correct!' },
+			{ type: 'text', content: 'It is decidedly so.' },
+			{ type: 'text', content: 'Probably.' },
+			{ type: 'text', content: 'No doubt about it.' },
+			{ type: 'text', content: 'No.' },
+			{ type: 'image', file: './assets/smc_serious.png' },
 		];
 
 		const randomResponse = responses[getRandInt(0, responses.length - 1)];
-		await message.channel.send(`${randomResponse}`);
+		if (randomResponse.type === 'image') {
+			await message.channel.send({ files: [randomResponse.file] });
+		}
+		else {
+			await message.channel.send(randomResponse.content);
+		}
 	}
 
 });

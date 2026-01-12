@@ -22,13 +22,7 @@ module.exports = {
 			})
 		} catch (err) {
 			console.error('Aurafarmed too hard!\n', err);
-
-			const errorMessage = {
-				content: 'Aurafarmed too hard!',
-				flags: MessageFlags.Ephemeral
-			}
-
-			await interaction.editReply(errorMessage).catch(()=>{});
+			await interaction.editReply('Aurafarmed too hard!').catch(()=>{});
 		}
 	},
 };

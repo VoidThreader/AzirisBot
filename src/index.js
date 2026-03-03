@@ -3,7 +3,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { getRandInt } = require('../utils/rand.js');
 
-const { token } = require('../config.json');
+const { token } = require('../config-dev.json');
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 client.commands = new Collection();

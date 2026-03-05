@@ -9,11 +9,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^14.22.1",
-    "fs": "^0.0.1-security"
+    "discord.js": "^14.25.1",
+    "fs": "^0.0.2",
+    "ollama": "^0.6.3"
   },
   "devDependencies": {
-    "@eslint/js": "^9.34.0",
-    "eslint": "^9.34.0"
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.0.2"
   }
 }

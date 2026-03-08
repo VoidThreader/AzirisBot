@@ -1,6 +1,6 @@
 const { SlashCommandBuilder } = require('discord.js');
 const { getRandInt } = require('../../utils/rand.js');
-const { OllamaAPI, OllamaModel, SysPrompt } = require('../../config-dev.json');
+const { OllamaAPI, OllamaModel, SysPrompt } = require('../../config.json');
 
 module.exports = {
 	data: new SlashCommandBuilder()

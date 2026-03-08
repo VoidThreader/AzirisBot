@@ -1,5 +1,8 @@
 {
 	"token" : "Your bot token",
 	"clientID" : "Your bot clientID",
-    "guildID" : "Server ID"
+    "guildID" : "Server ID",
+	"OllamaAPI" : "Ollama Endpoint",
+	"OllamaModel" : "Ollama Model",
+	"SysPrompt" : "Master prompt"
 }

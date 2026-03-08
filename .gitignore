@@ -3,3 +3,4 @@ config*.json
 eslint.config.js
 .env
 .dev*
+*.txt

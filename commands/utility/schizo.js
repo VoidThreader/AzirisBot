@@ -55,7 +55,7 @@ module.exports = {
 			}
 		} catch (error) {
 			console.error('Ollama error:', error);
-			await interaction.editReply('Failed to get a response from Ollama.');
+			await interaction.editReply('The Spire of Deceit responded with silence...');
 		}
 	}
 }
